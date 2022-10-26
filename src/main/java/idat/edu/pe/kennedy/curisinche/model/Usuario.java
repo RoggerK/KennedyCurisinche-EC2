@@ -15,6 +15,7 @@ public class Usuario {
 	private String usuario;
 	private String password;
 	private String rol;
+	
 	public Long getIdUsuario() {
 		return idUsuario;
 	}

@@ -31,10 +31,10 @@ public class BodegaController {
 	@GetMapping("/listar/{id}")
 	public ResponseEntity<Bodega> proId(@PathVariable Long id) {
 		Bodega bodega = service.porId(id);
-		if(id == null) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		if(id != null) {
+			return new ResponseEntity<Bodega>(bodega, HttpStatus.OK);
 		}
-		return new ResponseEntity<Bodega>(bodega, HttpStatus.OK);
+		return new ResponseEntity<Bodega>(HttpStatus.NOT_FOUND);
 	}
 	
 	@PostMapping("/guardar")

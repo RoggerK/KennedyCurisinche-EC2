@@ -31,10 +31,10 @@ public class ProductoController {
 	@GetMapping("/listar/{id}")
 	public ResponseEntity<Producto> proId(@PathVariable Long id) {
 		Producto producto = service.porId(id);
-		if(id == null) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		if(id != null) {
+			return new ResponseEntity<Producto>(producto, HttpStatus.OK);
 		}
-		return new ResponseEntity<Producto>(producto, HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 	
 	@PostMapping("/guardar")
