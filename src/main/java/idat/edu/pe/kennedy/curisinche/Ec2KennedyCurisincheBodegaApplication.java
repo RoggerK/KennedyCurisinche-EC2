@@ -1,4 +1,4 @@
-package idat.edu.pe.sw2.bodega.kennedy.curisinche;
+package idat.edu.pe.kennedy.curisinche;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
